@@ -1,6 +1,7 @@
 const API_ROOT = "http://localhost:3000/projects";
 let taskList = document.getElementsByTagName('tbody')[0];
 getListData();
+let id = null;
 
 function getListData() {
   ajax({
@@ -67,7 +68,7 @@ function realTimeupdateData(status) {
 }
 
 taskList.addEventListener('click', function (event) {
-  let id = event.target.parentElement.parentElement.getAttribute('data-id');
+  id = event.target.parentElement.parentElement.getAttribute('data-id');
   if (!id) {
       return false;
   }
@@ -85,7 +86,23 @@ function cancelDelete() {
 }
 
 function deleteTask() {
-  let pop = document.getElementsByClassName('pop')[0];
+  deleteItemData();
+  let pop = document.querySelector('.pop');
   pop.style.display = 'none';
+}
+
+function deleteItemData() {
+  ajax({
+      url: API_ROOT + '/' + id,
+      method: "DELETE",
+      success: function(result) {
+          deleteItem();
+      }, 
+  })
+}
+
+function deleteItem() {
+  let item = taskList.querySelector(`tr[data-id='${id}']`);
+  taskList.removeChild(item);
 }
 
