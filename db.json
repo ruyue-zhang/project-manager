@@ -1,20 +1,6 @@
 {
   "projects": [
     {
-      "id": 7,
-      "name": "SlidingMenu(不建议使用)",
-      "endTime": "2018-12-07",
-      "description": "一个侧滑菜单开源库, 在 Google 自己原生态的侧滑菜单 NavigationDrawer 没有出现之前, 这个库就已经被广泛使用, 可是到现在这个库已经被放弃了",
-      "status": "ACTIVE"
-    },
-    {
-      "id": 8,
-      "name": "android-best-practices",
-      "endTime": "2018-12-08",
-      "description": "Android 开发最佳实践, 里面所介绍的经验都是来自于 Futurice 公司 Android 开发者, 介绍内容有 Android 开发规范, 架构, 布局技巧, 以及使用一些有助于快速开发相关工具等等, 非常适合新手去学习",
-      "status": "CLOSED"
-    },
-    {
       "id": 9,
       "name": "EventBus",
       "endTime": "2018-12-09",
@@ -27,13 +13,6 @@
       "endTime": "2018-12-10",
       "description": "Android-Async-Http 是 Android 一款老牌异步请求库, 专门对 Android 在 Apache 的 HttpClient 基础上构建的异步 http 连接, 该库有很多特征, 例如: 库的 size 小, 支持文件上传不需使用第三方库支持, 内部使用线程池来处理并发, 等等",
       "status": "PENDING"
-    },
-    {
-      "id": 11,
-      "name": "fresco",
-      "endTime": "2018-12-11",
-      "description": "Fresco 是 FaceBook 公司出品的一款图片缓存库, Fresco 是一个强大的图片加载组件, 支持加载 Gif 图和 WebP 格式, 支持 Android2.3(API level 9) 及其以上系统, Fresco 中设计了 Image pipeline 和 Drawees 两个模块各施其职, 使得图片完美加载出来, 想知道更多 image pipeline 和 Drawees 有关于它的特性, 可以到它官方平台看介绍",
-      "status": "ACTIVE"
     },
     {
       "id": 12,
