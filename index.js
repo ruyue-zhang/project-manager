@@ -2,8 +2,6 @@ const API_ROOT = "http://localhost:3000/projects";
 let taskList = document.getElementsByTagName('tbody')[0];
 getListData();
 
-
-
 function getListData() {
   ajax({
       url: API_ROOT,
@@ -12,24 +10,25 @@ function getListData() {
         renderProjectList(responseText);
         let status = document.getElementsByClassName('status');
         changeColorByStatus(status);
+        realTimeupdateData(status);
       }, 
   })
 }
 
 function changeColorByStatus(status) {
   for(let i = 0; i < status.length; i++) {
-      switch(status[i].innerText) {
-          case 'ACTIVE':
-              status[i].style.color = '#666666';
-              break;
-          case 'PENDING':
-              status[i].style.color = '#ee706d';
-              break;
-          case 'CLOSED':
-              status[i].style.color = '#f7da47';
-              break;
-          default:
-      }
+    switch(status[i].innerText) {
+        case 'ACTIVE':
+            status[i].style.color = '#666666';
+            break;
+        case 'PENDING':
+            status[i].style.color = '#ee706d';
+            break;
+        case 'CLOSED':
+            status[i].style.color = '#f7da47';
+            break;
+        default:
+    }
   }
 }
 
@@ -47,5 +46,23 @@ function renderProjectList(data) {
           <td><input type="submit" value="删除" class="delete"></td>
       </tr>`;
   },'');
+}
+
+function realTimeupdateData(status) {
+  status = Array.from(status);
+  
+  let all = status.length - 1;
+  let active = status.filter(value => value.innerText==='ACTIVE').length;
+  let pending = status.filter(value => value.innerText==='PENDING').length;
+  let closed = all - active - pending;
+
+  document.querySelector('.all-number').innerText = all;
+  document.querySelector('.avtive-number').innerText = active;
+  document.querySelector('.pending-number').innerText = pending;
+  document.querySelector('.closed-number').innerText = closed;
+
+  document.querySelector('.active-percent').innerText = Math.round(active / all * 1000) / 10 + '%';
+  document.querySelector('.pending-percent').innerText = Math.round(pending / all * 1000) / 10 + '%';
+  document.querySelector('.closed-percent').innerText = Math.round(closed / all * 1000) / 10 + '%';    
 }
 
