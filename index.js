@@ -96,7 +96,8 @@ function changeNumbers(all, active, pending, closed) {
 function changePercents(all, active, pending, closed) {
   document.querySelector('.active-percent').innerText = all ? (active / all * 100).toFixed(2) + '%' : '0%';
   document.querySelector('.pending-percent').innerText = all ? (pending / all * 100).toFixed(2) + '%' : '0%';
-  document.querySelector('.closed-percent').innerText = all ? (closed / all * 100).toFixed(2) + '%' : '0%';  
+  let closedNumber = (100 - (active / all * 100).toFixed(2) - (pending / all * 100).toFixed(2)).toFixed(2);
+  document.querySelector('.closed-percent').innerText = all ? closedNumber + '%' : '0%';  
 }
 
 function popDisplay() {
