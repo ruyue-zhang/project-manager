@@ -97,6 +97,8 @@ function deleteItemData() {
       method: "DELETE",
       success: function(result) {
           deleteItem();
+          let status = document.getElementsByClassName('status');
+          realTimeupDateData(status);
       }, 
   })
 }
