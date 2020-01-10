@@ -71,6 +71,11 @@ taskList.addEventListener('click', function (event) {
   if (!id) {
       return false;
   }
-  event.target.value === '删除' ? console.log(id) : '';
-})
+  event.target.value === '删除' ? popDisplay() : '';
+});
+
+function popDisplay() {
+  let pop = document.querySelector('.pop');
+  pop.style.display = 'block';
+}
 
