@@ -42,3 +42,23 @@
 
   background-color: #3b67a4;
 }
+
+.tags-info {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.tags-name {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 50px;
+  color: white;
+}
+
+.task-number {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 30px;
+  color: white;
+}
