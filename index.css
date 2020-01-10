@@ -161,3 +161,42 @@ td {
   margin-right: 20px;
   width: 10%;
 }
+
+tbody {
+  font-size: 20px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #DCDEE3;
+}
+
+tbody tr td {
+  margin: 10px 0;
+}
+
+tbody .description { 
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  -webkit-box-orient: vertical;
+
+  width: 650px;
+
+  -webkit-line-clamp: 2;
+}
+
+tbody .description:hover {
+  display: block;
+}
+
+.delete {
+  width: 50px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+
+  font-size: 16px;
+
+  color: white;
+  background-color: #ee706d;
+}
