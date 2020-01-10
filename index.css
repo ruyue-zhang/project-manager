@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  
+  height: 120px;
+  width: 100%;
+
+  font-family: serif, "Microsoft YaHei";
+
+  margin: 20px auto;
+}
+
+.tags {
+  position: relative;
+  flex-grow: 1;
+
+  margin: 0 10px 0 10px;
+  border-radius: 5px;
+}
+
+.all {
+  margin-left: 20px;
+
+  background-color: #31b48d;
+}
+
+.active {
+  background-color: #38a1f2;
+}
+
+.pending {
+  background-color: #7538c7;
+}
+
+.closed {
+  margin-right: 20px;
+
+  background-color: #3b67a4;
+}
