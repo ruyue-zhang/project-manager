@@ -66,3 +66,11 @@ function realTimeupdateData(status) {
   document.querySelector('.closed-percent').innerText = Math.round(closed / all * 1000) / 10 + '%';    
 }
 
+taskList.addEventListener('click', function (event) {
+  let id = event.target.parentElement.parentElement.getAttribute('data-id');
+  if (!id) {
+      return false;
+  }
+  event.target.value === '删除' ? console.log(id) : '';
+})
+
