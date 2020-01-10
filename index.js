@@ -18,7 +18,7 @@ function getListData() {
         renderProjectList(responseText);
         let status = document.getElementsByClassName('status');
         changeColorByStatus(status);
-        realTimeupdateData(status);
+        realTimeUpdateData(status);
       }, 
   })
 }
@@ -30,7 +30,7 @@ function deleteItemData() {
       success: function(result) {
           deleteItem();
           let status = document.getElementsByClassName('status');
-          realTimeupdateData(status);
+          realTimeUpdateData(status);
       }, 
   })
 }
@@ -76,7 +76,7 @@ function changeColorByStatus(status) {
   }
 }
 
-function realTimeupdateData(status) {
+function realTimeUpdateData(status) {
   status = Array.from(status);
   let all = status.length - 1;
   let active = status.filter(value => value.innerText==='ACTIVE').length;
