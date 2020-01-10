@@ -8,7 +8,7 @@ options = {
   fail: function(error) {}    // 请求失败或出错后调用此方法
 }
 **/
-window.ajax = function(options) {
+window.ajax = function (options) {
   const ajaxOptions = {
     url: options.url || "",
     method: options.method.toUpperCase() || "GET",
