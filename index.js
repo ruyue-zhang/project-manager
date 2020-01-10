@@ -79,3 +79,8 @@ function popDisplay() {
   pop.style.display = 'block';
 }
 
+function cancelDelete() {
+  let pop = document.querySelector('.pop');
+  pop.style.display = 'none';
+}
+
