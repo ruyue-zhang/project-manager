@@ -1,5 +1,10 @@
 const API_ROOT = "http://localhost:3000/projects";
 let taskList = document.getElementsByTagName('tbody')[0];
+const POP = document.querySelector('.pop');
+const ACTIVE = "ACTIVE";
+const PENDING = "PENDING";
+const CLOSED = "CLOSED";
+const DELETE = "删除";
 getListData();
 let id = null;
 
@@ -19,13 +24,13 @@ function getListData() {
 function changeColorByStatus(status) {
   for(let i = 0; i < status.length; i++) {
     switch(status[i].innerText) {
-        case 'ACTIVE':
+        case ACTIVE:
             status[i].style.color = '#666666';
             break;
-        case 'PENDING':
+        case PENDING:
             status[i].style.color = '#ee706d';
             break;
-        case 'CLOSED':
+        case CLOSED:
             status[i].style.color = '#f7da47';
             break;
         default:
@@ -72,23 +77,20 @@ taskList.addEventListener('click', function (event) {
   if (!id) {
       return false;
   }
-  event.target.value === '删除' ? popDisplay() : '';
+  event.target.value === DELETE ? popDisplay() : '';
 });
 
 function popDisplay() {
-  let pop = document.querySelector('.pop');
-  pop.style.display = 'block';
+  POP.style.display = 'block';
 }
 
 function cancelDelete() {
-  let pop = document.querySelector('.pop');
-  pop.style.display = 'none';
+  POP.style.display = 'none';
 }
 
 function deleteTask() {
   deleteItemData();
-  let pop = document.querySelector('.pop');
-  pop.style.display = 'none';
+  POP.style.display = 'none';
 }
 
 function deleteItemData() {
