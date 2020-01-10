@@ -243,8 +243,30 @@ tbody .description:hover {
   top: 40px;
 
   font-size: 24px;
-  
+
   color: #F1C826;
+}
+
+.hint {
+  position: absolute;
+  left: 50px;
+  top: 40px;
+
+  height: 100px;
+  width: 200px;
+}
+
+.hint-title {
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #333;
+}
+
+.hint-content {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
 }
 
 
