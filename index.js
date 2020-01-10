@@ -68,10 +68,16 @@ function realTimeupdateData(status) {
   document.querySelector('.avtive-number').innerText = active;
   document.querySelector('.pending-number').innerText = pending;
   document.querySelector('.closed-number').innerText = closed;
-
-  document.querySelector('.active-percent').innerText = Math.round(active / all * 1000) / 10 + '%';
-  document.querySelector('.pending-percent').innerText = Math.round(pending / all * 1000) / 10 + '%';
-  document.querySelector('.closed-percent').innerText = Math.round(closed / all * 1000) / 10 + '%';    
+  if(all)  {
+    document.querySelector('.active-percent').innerText = Math.round(active / all * 1000) / 10 + '%';
+    document.querySelector('.pending-percent').innerText = Math.round(pending / all * 1000) / 10 + '%';
+    document.querySelector('.closed-percent').innerText = Math.round(closed / all * 1000) / 10 + '%';  
+  } else {
+    document.querySelector('.active-percent').innerText = '0%';
+    document.querySelector('.pending-percent').innerText = '0%';
+    document.querySelector('.closed-percent').innerText = '0%';  
+  }
+   
 }
 
 taskList.addEventListener('click', function (event) {

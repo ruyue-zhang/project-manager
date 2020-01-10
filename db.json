@@ -1,18 +1,3 @@
 {
-  "projects": [
-    {
-      "id": 19,
-      "name": "MagicalRecord",
-      "endTime": "2018-12-19",
-      "description": "作者是 Coursera 的 iOS 工程师， 该项目创作灵感来自于 Ruby on Rails 的 Active Record, 主要为方便操作 CoreData 而生， 帮助清除 CoreData 引用的代码， 协助方便 CoreData 的工作",
-      "status": "CLOSED"
-    },
-    {
-      "id": 20,
-      "name": "ASIHTTPRequest",
-      "endTime": "2018-12-20",
-      "description": "一个轻量级的 iOS 网络通信类库， 基于 CFNetwork 框架开发， 但现在已经停止更新， 多数开发者改用 AFNetworking 替代)",
-      "status": "ACTIVE"
-    }
-  ]
+  "projects": []
 }
