@@ -1,12 +1,14 @@
 const API_ROOT = "http://localhost:3000/projects";
-let taskList = document.getElementsByTagName('tbody')[0];
 const POP = document.querySelector('.pop');
 const ACTIVE = "ACTIVE";
 const PENDING = "PENDING";
 const CLOSED = "CLOSED";
 const DELETE = "删除";
-getListData();
+
+let taskList = document.getElementsByTagName('tbody')[0];
 let id = null;
+getListData();
+
 
 function getListData() {
   ajax({
@@ -21,7 +23,7 @@ function getListData() {
   })
 }
 
-function changeColorByStatus(status) {
+function changeColorByStatus(status) { 
   for(let i = 0; i < status.length; i++) {
     switch(status[i].innerText) {
         case ACTIVE:
@@ -100,7 +102,7 @@ function deleteItemData() {
       success: function(result) {
           deleteItem();
           let status = document.getElementsByClassName('status');
-          realTimeupDateData(status);
+          realTimeupdateData(status);
       }, 
   })
 }

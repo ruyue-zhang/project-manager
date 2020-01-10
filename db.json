@@ -1,34 +1,6 @@
 {
   "projects": [
     {
-      "id": 14,
-      "name": "GPUImage",
-      "endTime": "2018-12-14",
-      "description": "一款强大的图片滤镜工具， 支持自定义滤镜， 可用来实时处理图片和视频流， 作者是 SonoPlot 公司的 CTO, 在很小的时候便开始接触编程， 他在 SO 上面的回答也有很多值得阅读， GPUImage 这个项目从 2012 年开始， 使用 OpenGL 图形程序接口编写， 性能非常好， 现在很多 iOS 程序员都用它来实现 iOS 的模糊效果",
-      "status": "PENDING"
-    },
-    {
-      "id": 15,
-      "name": "three20",
-      "endTime": "2018-12-15",
-      "description": "由 Facebook iOS 客户端衍生出的一款 iPhone 框架， 内置许多丰富的功能， 有丰富的界面， 对底层的操作便捷， 为开发者省下了很多时间， 但现在已经停止了更新， 一个 PR 把代码删得干干净净， 不要好奇去点开 Files changed, 我点开后该页面直接卡死， three20 当中的一位作者创建了 Nimbus, 算是 three20 的一个替代品",
-      "status": "ACTIVE"
-    },
-    {
-      "id": 16,
-      "name": "SDWebImage",
-      "endTime": "2018-12-16",
-      "description": "作者 Olivier Poitrey 是 Dailymotion 的 CTO, 拥有多个不错的开源项目， 此项目常用于对从 Web 端接受到的图片进行缓存， 是 UIImageView 的扩展， 应用起来比较简单",
-      "status": "CLOSED"
-    },
-    {
-      "id": 17,
-      "name": "ReactiveCocoa",
-      "endTime": "2018-12-17",
-      "description": "由 GitHub 工程师们开发的一个应用于 iOS 和 OS X 开发的函数响应式编程新框架， Matt 称其为 'An open source project that exemplifies this brave new era for Objective-C'， 也有人说它是 Cocoa 的未来， 具体可看唐巧写的这篇文章",
-      "status": "ACTIVE"
-    },
-    {
       "id": 19,
       "name": "MagicalRecord",
       "endTime": "2018-12-19",
