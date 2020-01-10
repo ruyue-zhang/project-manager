@@ -84,3 +84,8 @@ function cancelDelete() {
   pop.style.display = 'none';
 }
 
+function deleteTask() {
+  let pop = document.getElementsByClassName('pop')[0];
+  pop.style.display = 'none';
+}
+
