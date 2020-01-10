@@ -23,22 +23,25 @@ function getListData() {
   })
 }
 
-function changeColorByStatus(status) { 
-  for(let i = 0; i < status.length; i++) {
-    switch(status[i].innerText) {
-        case ACTIVE:
-            status[i].style.color = '#666666';
-            break;
-        case PENDING:
-            status[i].style.color = '#ee706d';
-            break;
-        case CLOSED:
-            status[i].style.color = '#f7da47';
-            break;
-        default:
-    }
-  }
+function deleteItemData() {
+  ajax({
+      url: API_ROOT + '/' + id,
+      method: "DELETE",
+      success: function(result) {
+          deleteItem();
+          let status = document.getElementsByClassName('status');
+          realTimeupdateData(status);
+      }, 
+  })
 }
+
+taskList.addEventListener('click', function (event) {
+  id = event.target.parentElement.parentElement.getAttribute('data-id');
+  if (!id) {
+      return false;
+  }
+  event.target.value === DELETE ? popDisplay() : '';
+});
 
 function renderProjectList(data) {
   if (!Array.isArray(data) && !data instanceof Array) {
@@ -54,6 +57,23 @@ function renderProjectList(data) {
           <td><input type="submit" value="删除" class="delete"></td>
       </tr>`;
   },'');
+}
+
+function changeColorByStatus(status) { 
+  for(let i = 0; i < status.length; i++) {
+    switch(status[i].innerText) {
+        case ACTIVE:
+            status[i].style.color = '#666666';
+            break;
+        case PENDING:
+            status[i].style.color = '#ee706d';
+            break;
+        case CLOSED:
+            status[i].style.color = '#f7da47';
+            break;
+        default:
+    }
+  }
 }
 
 function realTimeupdateData(status) {
@@ -80,14 +100,6 @@ function realTimeupdateData(status) {
    
 }
 
-taskList.addEventListener('click', function (event) {
-  id = event.target.parentElement.parentElement.getAttribute('data-id');
-  if (!id) {
-      return false;
-  }
-  event.target.value === DELETE ? popDisplay() : '';
-});
-
 function popDisplay() {
   POP.style.display = 'block';
 }
@@ -99,18 +111,6 @@ function cancelDelete() {
 function deleteTask() {
   deleteItemData();
   POP.style.display = 'none';
-}
-
-function deleteItemData() {
-  ajax({
-      url: API_ROOT + '/' + id,
-      method: "DELETE",
-      success: function(result) {
-          deleteItem();
-          let status = document.getElementsByClassName('status');
-          realTimeupdateData(status);
-      }, 
-  })
 }
 
 function deleteItem() {
