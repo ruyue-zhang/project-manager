@@ -98,3 +98,10 @@
   font-weight: 500;
   color: white;
 }
+
+.table-title {
+  margin: 0 20px;
+
+  font-size: 30px;
+  font-weight: 700;
+}
