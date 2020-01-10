@@ -63,7 +63,7 @@
   color: white;
 }
 
-.iconfont {
+.header .iconfont {
   position: absolute;
   right: 30px;
   top: 10px;
@@ -71,4 +71,30 @@
   font-size: 100px;
   opacity: 0.3;
   color: aliceblue;
+}
+
+.real-time {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+
+  height: 30px;
+  width: 50px;
+
+  line-height: 30px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+
+  background: rgba(255,255,255,0.3);
+}
+
+.percent {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+
+  font-size: 32px;
+  font-weight: 500;
+  color: white;
 }
