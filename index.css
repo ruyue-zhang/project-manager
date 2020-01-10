@@ -223,8 +223,28 @@ tbody .description:hover {
   width: 400px;
   height: 200px;
   border-radius: 5px;
-  
+
   background-color: white;
+}
+
+.icon-guanbi {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+
+  font-size: 16px;
+
+  color: black;
+}
+
+.icon-wenhao {
+  position: absolute;
+  left: 17px;
+  top: 40px;
+
+  font-size: 24px;
+  
+  color: #F1C826;
 }
 
 
