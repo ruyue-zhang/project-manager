@@ -94,9 +94,9 @@ function changeNumbers(all, active, pending, closed) {
 }
 
 function changePercents(all, active, pending, closed) {
-  document.querySelector('.active-percent').innerText = all ? Math.round(active / all * 1000) / 10 + '%' : '0%';
-  document.querySelector('.pending-percent').innerText = all ? Math.round(pending / all * 1000) / 10 + '%' : '0%';
-  document.querySelector('.closed-percent').innerText = all ? Math.round(closed / all * 1000) / 10 + '%' : '0%';  
+  document.querySelector('.active-percent').innerText = all ? (active / all * 100).toFixed(2) + '%' : '0%';
+  document.querySelector('.pending-percent').innerText = all ? (pending / all * 100).toFixed(2) + '%' : '0%';
+  document.querySelector('.closed-percent').innerText = all ? (closed / all * 100).toFixed(2) + '%' : '0%';  
 }
 
 function popDisplay() {
