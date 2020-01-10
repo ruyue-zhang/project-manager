@@ -1,20 +1,6 @@
 {
   "projects": [
     {
-      "id": 3,
-      "name": "RxJava",
-      "endTime": "2018-12-03",
-      "description": "RxJava 是一个在 Java VM 上使用可观测的序列来组成异步的, 基于事件的程序的库, 简单来说它就是一个实现异步操作的库, RxJava 的优点在于一个词 '简洁', 使用它就算你程序逻辑有多么复杂, 它依然能够保持简洁易懂",
-      "status": "PENDING"
-    },
-    {
-      "id": 4,
-      "name": "retrofit",
-      "endTime": "2018-12-04",
-      "description": "Retrofit 是 Square 公司出品的 HTTP 请求库, 同时是 Square 是最早开源项目之一, Retrofit 是目前 Android 最流行的 Http Client 库之一, 目前版本是 Retrofit2.0 Beta4, 越来越多 Android 开发者开始使用这个请求库了",
-      "status": "ACTIVE"
-    },
-    {
       "id": 8,
       "name": "android-best-practices",
       "endTime": "2018-12-08",
@@ -26,13 +12,6 @@
       "name": "EventBus",
       "endTime": "2018-12-09",
       "description": "EventBus 是 Android 事件管理总线, 使用它可以替带 Android BroadCast, BroadCastReceiver, Handler 在 Activity, Fragment, Service, 线程之间传递消息, 大大简化了事件传递逻辑",
-      "status": "PENDING"
-    },
-    {
-      "id": 10,
-      "name": "android-async-http",
-      "endTime": "2018-12-10",
-      "description": "Android-Async-Http 是 Android 一款老牌异步请求库, 专门对 Android 在 Apache 的 HttpClient 基础上构建的异步 http 连接, 该库有很多特征, 例如: 库的 size 小, 支持文件上传不需使用第三方库支持, 内部使用线程池来处理并发, 等等",
       "status": "PENDING"
     },
     {

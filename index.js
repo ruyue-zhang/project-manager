@@ -78,26 +78,25 @@ function changeColorByStatus(status) {
 
 function realTimeupdateData(status) {
   status = Array.from(status);
-  
   let all = status.length - 1;
   let active = status.filter(value => value.innerText==='ACTIVE').length;
   let pending = status.filter(value => value.innerText==='PENDING').length;
   let closed = all - active - pending;
+  changeNumbers(all, active, pending, closed);
+  changePercents(all, active, pending, closed) ;
+}
 
+function changeNumbers(all, active, pending, closed) {
   document.querySelector('.all-number').innerText = all;
   document.querySelector('.avtive-number').innerText = active;
   document.querySelector('.pending-number').innerText = pending;
   document.querySelector('.closed-number').innerText = closed;
-  if(all)  {
-    document.querySelector('.active-percent').innerText = Math.round(active / all * 1000) / 10 + '%';
-    document.querySelector('.pending-percent').innerText = Math.round(pending / all * 1000) / 10 + '%';
-    document.querySelector('.closed-percent').innerText = Math.round(closed / all * 1000) / 10 + '%';  
-  } else {
-    document.querySelector('.active-percent').innerText = '0%';
-    document.querySelector('.pending-percent').innerText = '0%';
-    document.querySelector('.closed-percent').innerText = '0%';  
-  }
-   
+}
+
+function changePercents(all, active, pending, closed) {
+  document.querySelector('.active-percent').innerText = all ? Math.round(active / all * 1000) / 10 + '%' : '0%';
+  document.querySelector('.pending-percent').innerText = all ? Math.round(pending / all * 1000) / 10 + '%' : '0%';
+  document.querySelector('.closed-percent').innerText = all ? Math.round(closed / all * 1000) / 10 + '%' : '0%';  
 }
 
 function popDisplay() {
