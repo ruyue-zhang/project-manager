@@ -1,20 +1,6 @@
 {
   "projects": [
     {
-      "id": 1,
-      "name": "react-native",
-      "endTime": "2018-12-01",
-      "description": "这个是 Facebook 在 React.js Conf 2015 大会上推出的基于 JavaScript 的开源框架 React Native, 该框架结合了 Web 应用和 Native 应用的优势, 可以使用 JavaScript 来开发 iOS 和 Android 原生应用",
-      "status": "ACTIVE"
-    },
-    {
-      "id": 2,
-      "name": "Android-Universal-Image-Loader",
-      "endTime": "2018-12-02",
-      "description": "ImageLoader 是最早开源的 Android 图片缓存库, 强大的缓存机制, 早期被广泛 Android 应用使用, 至今仍然有很多 Android 开发者在使用",
-      "status": "ACTIVE"
-    },
-    {
       "id": 3,
       "name": "RxJava",
       "endTime": "2018-12-03",
